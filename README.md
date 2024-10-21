@@ -1,20 +1,4 @@
-void InsertionSort(int[] array)
-{
-    int n = array.Length;
-    for (int i = 1; i < n; i++)
-    {
-        int key = array[i];  // element to be inserted
-        int j = i - 1;
-        
-        while (j >= 0 && array[j] > key)
-        {
-            array[j + 1] = array[j];  // Shift larger elements right
-            j--;
-        }
-        
-        array[j + 1] = key;  // Insert key in its correct place
-    }
-}
+Insertion Sort DRY RUN
 
 DRY RUN -----
 
