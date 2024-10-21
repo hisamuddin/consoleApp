@@ -19,12 +19,10 @@ class BubbleSort
                     if (array[j] > array[j + 1])
                     {
                         // Change console color for swap
-                        Console.ForegroundColor = ConsoleColor.Red; // Change to red or any color you prefer
-                        Console.WriteLine($" Swapping {array[j]} and {array[j + 1]}");
-                        Console.ResetColor(); // Reset to default color
+                        // Console.ForegroundColor = ConsoleColor.White; // Change to red or any color you prefer
+                        Console.WriteLine($" Swapping {array[j]} and {array[j + 1]} SWAPPING DONE");
+                        // Console.ResetColor(); // Reset to default color
 
-                        // Swap array[j] and array[j + 1]
-                        Console.WriteLine($"    Swapping {array[j]} and {array[j + 1]}");
                         int temp = array[j];
                         array[j] = array[j + 1];
                         array[j + 1] = temp;
