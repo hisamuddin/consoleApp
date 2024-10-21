@@ -1,4 +1,7 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
-Console.WriteLine("git first");
-Console.WriteLine("git seconds");
+﻿
+int[] numbers = { 5, 3, 8, 4, 2 };
+Console.WriteLine("Original array: " + string.Join(", ", numbers));
+BubbleSort bubble = new BubbleSort();
+bubble.BubbleSortMethod(numbers);
+Console.WriteLine("Sorted array: " + string.Join(", ", bubble.BubbleSortMethod(numbers)));
+
