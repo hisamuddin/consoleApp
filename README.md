@@ -1,75 +1,44 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Insertion Sort Dry Run</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
+<details>
+
+```c#
+public int[] InsertionSortMethod()
+{
+    Console.WriteLine("Starting Insertion Sort...");
+    int[] array = { 3, 5, 4, 2, 7, 12 };
+    Console.WriteLine("Original array: " + string.Join(", ", array));
+
+    int n = array.Length;
+
+    for (int i = 1; i < n; i++)
+    {
+        Console.WriteLine($"Pass {i + 1}:");
+        int key = array[i];  // Element to be inserted
+        int j = i - 1;
+
+        // Shift elements of array[0..i-1] that are greater than key
+        // to one position ahead of their current position
+        Console.WriteLine($"    Comparing {array[j]} and {key}");
+        while (j >= 0 && array[j] > key)
+        {
+            Console.ForegroundColor = ConsoleColor.Red; // Change to red or any color you prefer
+            Console.WriteLine($"    Shifting {array[j]} to the right");
+            Console.ResetColor(); // Reset to default color
+
+            array[j + 1] = array[j];
+            j = j - 1;
         }
-        .code {
-            background-color: #f4f4f4;
-            padding: 10px;
-            border: 1px solid #ccc;
-            margin-bottom: 10px;
-            white-space: pre;
-        }
-        h2 {
-            color: #2d89ef;
-        }
-        h3 {
-            color: #1e7145;
-        }
-    </style>
-</head>
-<body>
+        
+        Console.WriteLine($"    Current array state before inserting key element: {string.Join(", ", array)}");
+        Console.WriteLine($"    Inserting key {key} at position {j + 1}");
+        
+        // Insert the key at the correct position
+        array[j + 1] = key;
+        Console.WriteLine($"    Current array state after insertion: {string.Join(", ", array)}");
+    }
 
-    <h2>Insertion Sort Dry Run</h2>
-    
-    <h3>Initial Array:</h3>
-    <div class="code">[7, 4, 5, 2]</div>
+    Console.ResetColor();
+    return array;
+}
+```
 
-    <h3>Pass 1:</h3>
-    <div class="code">
-        i = 1, key = 4, j = 0
-        Compare key with array[j] (4 &lt; 7), so shift 7 to the right.
-        Array becomes: [7, 7, 5, 2]
-        j becomes -1 (exit loop).
-        Insert key (4) at array[j + 1] → array[0] = 4
-        Array after Pass 1: [4, 7, 5, 2]
-    </div>
-
-    <h3>Pass 2:</h3>
-    <div class="code">
-        i = 2, key = 5, j = 1
-        Compare key with array[j] (5 &lt; 7), so shift 7 to the right.
-        Array becomes: [4, 7, 7, 2]
-        j becomes 0.
-        Compare key with array[j] (5 &gt;= 4), so stop shifting.
-        Insert key (5) at array[j + 1] → array[1] = 5
-        Array after Pass 2: [4, 5, 7, 2]
-    </div>
-
-    <h3>Pass 3:</h3>
-    <div class="code">
-        i = 3, key = 2, j = 2
-        Compare key with array[j] (2 &lt; 7), so shift 7 to the right.
-        Array becomes: [4, 5, 7, 7]
-        j becomes 1.
-        Compare key with array[j] (2 &lt; 5), so shift 5 to the right.
-        Array becomes: [4, 5, 5, 7]
-        j becomes 0.
-        Compare key with array[j] (2 &lt; 4), so shift 4 to the right.
-        Array becomes: [4, 4, 5, 7]
-        j becomes -1 (exit loop).
-        Insert key (2) at array[j + 1] → array[0] = 2
-        Array after Pass 3: [2, 4, 5, 7]
-    </div>
-
-    <h3>Final Sorted Array:</h3>
-    <div class="code">[2, 4, 5, 7]</div>
-
-</body>
-</html>
+</details>
