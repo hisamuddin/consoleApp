@@ -1,40 +1,38 @@
 class InsertionSort
 {
-
-    public int[] InsertionSortMethod()
+    public int[] InsertionSortMethod(int[] arr)
     {
-        Console.WriteLine("Starting Insertion Sort...");
-        int[] array = { 3, 5, 4, 2, 7, 12 };
-        Console.WriteLine("Original array: " + string.Join(", ", array));
+        Console.WriteLine("========== Starting Insertion Sort ==========");
+        Console.WriteLine($"Original Array: [{string.Join(", ", arr)}]");
+        Console.WriteLine("=============================================\n");
 
-        int n = array.Length;
-        int pass = 1;
+        int n = arr.Length;
+
         for (int i = 1; i < n; i++)
         {
-            Console.WriteLine($"Pass {pass++}:");
-            int key = array[i];  // Element to be inserted
+            int key = arr[i];
             int j = i - 1;
 
-            // Shift elements of array[0..i-1] that are greater than key
-            // to one position ahead of their current position
-            Console.WriteLine($"    Comparing right elemets   {array[j]} with key {key}");
-            while (j >= 0 && array[j] > key)
-            {
-                Console.WriteLine($"    Shifting {array[j]} to the right");
+            Console.WriteLine($"--- Pass {i} ---");
+            Console.WriteLine($"Inserting element {key} into the sorted portion of the array.\n");
 
-                array[j + 1] = array[j];
-                j = j - 1;
+            while (j >= 0 && arr[j] > key)
+            {
+                Console.WriteLine($"Element {arr[j]} at index {j} is greater than {key}. Shifting it to the right.");
+                arr[j + 1] = arr[j];
+                j--;
+                Console.WriteLine($"Array after shifting: [{string.Join(", ", arr)}]\n");
             }
 
-            Console.WriteLine($"    Current array state before inserting key element: {string.Join(", ", array)}");
-            Console.WriteLine($"    Inserting key {key} at index {j + 1}");
-
-            // Insert the key at the correct position
-            array[j + 1] = key;
-            Console.WriteLine($"    Current array state after insertion: {string.Join(", ", array)}");
+            arr[j + 1] = key;
+            Console.WriteLine($"Inserted element {key} at index {j + 1}");
+            Console.WriteLine($"Array after Pass {i}: [{string.Join(", ", arr)}]\n");
         }
 
-        Console.ResetColor();
-        return array;
+        Console.WriteLine($"Sorted Array: [{string.Join(", ", arr)}]");
+        Console.WriteLine("========== Insertion Sort Completed ==========\n");
+
+        return arr;
     }
+
 }
