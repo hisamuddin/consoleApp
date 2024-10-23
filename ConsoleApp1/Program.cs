@@ -35,3 +35,14 @@ QuickSort quicksort = new QuickSort();
 int[] array = { 64, 34, 25, 12, 22, 11, 90 };
 var quickSortData = quicksort.QuickSortMethod(array, 0, array.Length - 1);
 Console.WriteLine("Sorted array: " + string.Join(", ", quickSortData));
+
+
+Console.WriteLine("========================== QuickSort =====================================");
+Console.WriteLine(Environment.NewLine);
+
+
+MergeSort merge = new MergeSort();
+int[] array4 = { 64, 34, 25, 12, 22, 11, 90 };
+int mid = (0 + array.Length - 1) / 2;
+//  merge.Merge(array4, 0, mid, array.Length - 1);
+// Console.WriteLine("Sorted array: " + string.Join(", ", mergeSortData));
