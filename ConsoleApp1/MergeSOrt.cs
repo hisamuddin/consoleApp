@@ -1,6 +1,6 @@
 class MergeSort
 {
-    public static void Merge(int[] array, int left, int mid, int right)
+    public void Merge(int[] array, int left, int mid, int right)
     {
         int leftArrayLength = mid - left + 1;
         int rightArrayLength = right - mid;
