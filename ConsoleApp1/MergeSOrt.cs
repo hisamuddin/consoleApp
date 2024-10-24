@@ -43,7 +43,7 @@ class MergeSort
         }
     }
 
-    public static void MergeSortRecursive(int[] array, int left, int right)
+    public void MergeSortRecursive(int[] array, int left, int right)
     {
         if (left < right)
         {
@@ -55,7 +55,4 @@ class MergeSort
             Merge(array, left, mid, right);
         }
     }
-
-
-
 }
