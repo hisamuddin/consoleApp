@@ -37,12 +37,23 @@ var quickSortData = quicksort.QuickSortMethod(array, 0, array.Length - 1);
 Console.WriteLine("Sorted array: " + string.Join(", ", quickSortData));
 
 
-Console.WriteLine("========================== QuickSort =====================================");
+Console.WriteLine("========================== MergeSort =====================================");
 Console.WriteLine(Environment.NewLine);
 
 
 MergeSort merge = new MergeSort();
 int[] array4 = { 64, 34, 25, 12, 22, 11, 90 };
 int mid = (0 + array.Length - 1) / 2;
-//  merge.Merge(array4, 0, mid, array.Length - 1);
-// Console.WriteLine("Sorted array: " + string.Join(", ", mergeSortData));
+merge.Merge(array4, 0, mid, array.Length - 1);
+
+
+
+Console.WriteLine("========================== HeapSort =====================================");
+Console.WriteLine(Environment.NewLine);
+
+
+HeapSort heapSort = new HeapSort();
+int[] arr = { 12, 11, 13, 5, 6, 7 };
+Console.WriteLine("Original array: [" + string.Join(", ", arr) + "]");
+heapSort.HeapSortMethod(arr);
+Console.WriteLine("Sorted array: [" + string.Join(", ", arr) + "]");
