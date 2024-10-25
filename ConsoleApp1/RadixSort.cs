@@ -54,10 +54,4 @@ class RadixSort
         for (int exp = 1; max / exp > 0; exp *= 10)
             CountingSort(arr, exp);
     }
-
-    // Main method to test the Radix Sort
-    static void Main(string[] args)
-    {
-
-    }
 }
