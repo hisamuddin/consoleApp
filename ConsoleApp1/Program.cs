@@ -57,3 +57,15 @@ int[] arr = { 12, 11, 13, 5, 6, 7 };
 Console.WriteLine("Original array: [" + string.Join(", ", arr) + "]");
 heapSort.HeapSortMethod(arr);
 Console.WriteLine("Sorted array: [" + string.Join(", ", arr) + "]");
+
+Console.WriteLine("========================== Redix =====================================");
+Console.WriteLine(Environment.NewLine);
+
+
+RadixSort radixSort = new RadixSort();
+int[] arr6 = { 170, 45, 75, 90, 802, 24, 2, 66 };
+Console.WriteLine("Original array: [" + string.Join(", ", arr6) + "]");
+radixSort.RadixSortMethod(arr6);
+Console.WriteLine("Sorted array: [" + string.Join(", ", arr6) + "]");
+
+
