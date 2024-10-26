@@ -40,48 +40,46 @@ public int[] InsertionSortMethod()
     return array;
 }
 
- public int[] BubbleSortMethod(int[] array)
+   public int[] SelectionSortMethod(int[] arr)
     {
+        Console.WriteLine("========== Starting Selection Sort ==========");
+        Console.WriteLine($"Original Array: [{string.Join(", ", arr)}]");
+        Console.WriteLine("=============================================\n");
+
+        int n = arr.Length;
+
+        for (int i = 0; i < n - 1; i++)
         {
-            int n = array.Length;
-            Console.WriteLine("Starting Bubble Sort...");
+            int minIndex = i;
+            Console.WriteLine($"--- Pass {i + 1} ---");
+            Console.WriteLine($"Starting to find the minimum from index {i} onwards.\n");
 
-            for (int i = 0; i < n - 1; i++)
+            for (int j = i + 1; j < n; j++)
             {
-                bool swapped = false;
-                Console.WriteLine($"Pass {i + 1}:");
+                Console.WriteLine($"Comparing element at index {minIndex} (Element: {arr[minIndex]}) with index {j} (Element: {arr[j]})");
 
-                for (int j = 0; j < n - i - 1; j++)
+                if (arr[j] < arr[minIndex])
                 {
-                    Console.WriteLine($"    Comparing {array[j]} and {array[j + 1]}");
-
-                    if (array[j] > array[j + 1])
-                    {
-                        // Change console color for swap
-                        // Console.ForegroundColor = ConsoleColor.White; // Change to red or any color you prefer
-                        Console.WriteLine($" Swapping {array[j]} and {array[j + 1]} SWAPPING DONE");
-                        // Console.ResetColor(); // Reset to default color
-
-                        int temp = array[j];
-                        array[j] = array[j + 1];
-                        array[j + 1] = temp;
-                        swapped = true;
-                    }
-
-                    Console.WriteLine($"    Current array state: {string.Join(", ", array)}");
-                }
-
-                // If no two elements were swapped by inner loop, then break
-                if (!swapped)
-                {
-                    Console.WriteLine("    No swaps made, array is sorted.");
-                    break;
+                    Console.WriteLine($"New minimum found at index {j} (Element: {arr[j]})");
+                    minIndex = j;
                 }
             }
 
-            Console.WriteLine("Bubble Sort completed.");
-            return array;
+            if (minIndex != i)
+            {
+                Console.WriteLine($"Swapping element at index {i} (Element: {arr[i]}) with new minimum at index {minIndex} (Element: {arr[minIndex]})");
+                int temp = arr[i];
+                arr[i] = arr[minIndex];
+                arr[minIndex] = temp;
+            }
+
+            Console.WriteLine($"Array after Pass {i + 1}: [{string.Join(", ", arr)}]\n");
         }
+
+        Console.WriteLine($"Sorted Array: [{string.Join(", ", arr)}]");
+        Console.WriteLine("========== Selection Sort Completed ==========\n");
+
+        return arr;
     }
 ```
 
