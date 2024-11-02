@@ -1,5 +1,8 @@
 <details>
 
+
+
+
 ```c#
 public int[] BubbleSortMethod(int[] arr)
     {
