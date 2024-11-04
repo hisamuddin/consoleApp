@@ -12,7 +12,44 @@ class QuickSort
         Console.WriteLine($"Left Index: {leftindex}, Right Index: {rightindex}");
         Console.WriteLine("===============================================\n");
 
-        Partition(arr, ref i, ref j, pivot);
+        while (i <= j)
+        {
+            Console.WriteLine($"--- Checking element at index {i} ---");
+            Console.WriteLine($"Current Element: {arr[i]}, Pivot: {pivot}");
+
+            // Increment index i while arr[i] is less than pivot
+            while (arr[i] < pivot)
+            {
+                Console.WriteLine($"Element {arr[i]} is less than pivot {pivot}, incrementing index i...");
+                i++;
+            }
+            Console.WriteLine($"Stopped incrementing i. Current index i: {i} (Element: {arr[i]})\n");
+
+            // Decrement index j while arr[j] is greater than pivot
+            Console.WriteLine($"--- Checking element at index {j} ---");
+            Console.WriteLine($"Current Element: {arr[j]}, Pivot: {pivot}");
+            while (arr[j] > pivot)
+            {
+                Console.WriteLine($"Element {arr[j]} is greater than pivot {pivot}, decrementing index j...");
+                j--;
+            }
+            Console.WriteLine($"Stopped decrementing j. Current index j: {j} (Element: {arr[j]})\n");
+
+            // Swap elements at i and j if i <= j
+            if (i <= j)
+            {
+                Console.WriteLine($"Swapping elements at index {i} and {j}...");
+                int temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+
+                Console.WriteLine($"Array after swap: [{string.Join(", ", arr)}]");
+                Console.WriteLine($"Incrementing i and decrementing j after swap.\n");
+
+                i++;
+                j--;
+            }
+        }
 
         Console.WriteLine($"New i value: {i}, New j value: {j}");
         Console.WriteLine($"Left Index: {leftindex}, Right Index: {rightindex}\n");
@@ -33,47 +70,5 @@ class QuickSort
         Console.WriteLine("========== QuickSort Method Completed ==========\n");
 
         return arr;
-
-        static void Partition(int[] arr, ref int i, ref int j, int pivot)
-        {
-            while (i <= j)
-            {
-                Console.WriteLine($"--- Checking element at index {i} ---");
-                Console.WriteLine($"Current Element: {arr[i]}, Pivot: {pivot}");
-
-                // Increment index i while arr[i] is less than pivot
-                while (arr[i] < pivot)
-                {
-                    Console.WriteLine($"Element {arr[i]} is less than pivot {pivot}, incrementing index i...");
-                    i++;
-                }
-                Console.WriteLine($"Stopped incrementing i. Current index i: {i} (Element: {arr[i]})\n");
-
-                // Decrement index j while arr[j] is greater than pivot
-                Console.WriteLine($"--- Checking element at index {j} ---");
-                Console.WriteLine($"Current Element: {arr[j]}, Pivot: {pivot}");
-                while (arr[j] > pivot)
-                {
-                    Console.WriteLine($"Element {arr[j]} is greater than pivot {pivot}, decrementing index j...");
-                    j--;
-                }
-                Console.WriteLine($"Stopped decrementing j. Current index j: {j} (Element: {arr[j]})\n");
-
-                // Swap elements at i and j if i <= j
-                if (i <= j)
-                {
-                    Console.WriteLine($"Swapping elements at index {i} and {j}...");
-                    int temp = arr[i];
-                    arr[i] = arr[j];
-                    arr[j] = temp;
-
-                    Console.WriteLine($"Array after swap: [{string.Join(", ", arr)}]");
-                    Console.WriteLine($"Incrementing i and decrementing j after swap.\n");
-
-                    i++;
-                    j--;
-                }
-            }
-        }
     }
 }
