@@ -1,5 +1,8 @@
 <details>
 
+
+
+
 ```c#
 public int[] BubbleSortMethod(int[] arr)
     {
@@ -306,6 +309,8 @@ public int[] InsertionSortMethod()
 scale from zero to million users
 
 Designing a system that supports millions of users is challenging, and it is a journey that requires continuous refinement and endless improvement. In this chapter, we build a system that supports a single user and gradually scale it up to serve millions of users. After reading this chapter, you will master a handful of techniques that will help you to crack the system design interview questions.
+
+
 
 ```
 
