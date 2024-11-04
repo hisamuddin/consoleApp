@@ -46,4 +46,29 @@ class BinarySearch
             }
         }
     }
+    public static int BinarySearchGPT(List<int> list, int target)
+    {
+        int left = 0;
+        int right = list.Count - 1;
+
+        while (left <= right)
+        {
+            int mid = left + (right - left) / 2; // Avoids overflow
+
+            if (list[mid] == target)
+            {
+                return mid; // Target found at mid
+            }
+            else if (list[mid] < target)
+            {
+                left = mid + 1; // Target is in the right half
+            }
+            else
+            {
+                right = mid - 1; // Target is in the left half
+            }
+        }
+
+        return -1; // Target not found
+    }
 }
