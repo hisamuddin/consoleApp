@@ -69,3 +69,9 @@ radixSort.RadixSortMethod(arr6);
 Console.WriteLine("Sorted array: [" + string.Join(", ", arr6) + "]");
 
 
+Console.WriteLine(Environment.NewLine);
+Console.WriteLine("Printing recursively");
+
+PrintRecursively.printnum(6);
+
+
