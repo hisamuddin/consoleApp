@@ -322,6 +322,11 @@ db sharding
 azure
 aws
 scaling application 
+networking
+react
+javascript 
+python
+Java
 
 
 
