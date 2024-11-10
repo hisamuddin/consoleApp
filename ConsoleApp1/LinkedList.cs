@@ -201,38 +201,4 @@ namespace LinkedListExamples
             Console.WriteLine("Head");
         }
     }
-
-    class Program
-    {
-        static void Main()
-        {
-            // Singly Linked List Example
-            var singlyList = new SinglyLinkedList();
-            singlyList.InsertEnd(1);
-            singlyList.InsertEnd(2);
-            singlyList.InsertEnd(3);
-            singlyList.Traverse(); // Output: 1 -> 2 -> 3 -> null
-
-            // Doubly Linked List Example
-            var doublyList = new DoublyLinkedList();
-            doublyList.InsertEnd(1);
-            doublyList.InsertEnd(2);
-            doublyList.InsertEnd(3);
-            doublyList.Traverse(); // Output: 1 <-> 2 <-> 3 <-> null
-
-            // Circular Linked List Example
-            var circularList = new CircularLinkedList();
-            circularList.InsertEnd(1);
-            circularList.InsertEnd(2);
-            circularList.InsertEnd(3);
-            circularList.Traverse(); // Output: 1 -> 2 -> 3 -> Head
-
-            // Doubly Circular Linked List Example
-            var doublyCircularList = new DoublyCircularLinkedList();
-            doublyCircularList.InsertEnd(1);
-            doublyCircularList.InsertEnd(2);
-            doublyCircularList.InsertEnd(3);
-            doublyCircularList.Traverse(); // Output: 1 <-> 2 <-> 3 <-> Head
-        }
-    }
 }
