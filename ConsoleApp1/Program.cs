@@ -105,3 +105,11 @@ doublyCircularList.InsertEnd(1);
 doublyCircularList.InsertEnd(2);
 doublyCircularList.InsertEnd(3);
 doublyCircularList.Traverse(); // Output: 1 <-> 2 <-> 3 <-> Head
+
+
+Console.WriteLine(Environment.NewLine);
+Console.WriteLine("String Operations");
+StringDataStructure _stringDT = new StringDataStructure();
+// Find the duplicate characters in the string
+var duplicates = _stringDT.GetDuplicateCharacters("google");
+Console.WriteLine("Duplicate characters in 'google' are: " + duplicates);
