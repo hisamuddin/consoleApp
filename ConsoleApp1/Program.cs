@@ -108,8 +108,16 @@ doublyCircularList.Traverse(); // Output: 1 <-> 2 <-> 3 <-> Head
 
 
 Console.WriteLine(Environment.NewLine);
-Console.WriteLine("String Operations");
+Console.WriteLine("String Operations _ get duplicate");
 StringDataStructure _stringDT = new StringDataStructure();
 // Find the duplicate characters in the string
 var duplicates = _stringDT.GetDuplicateCharacters("google");
 Console.WriteLine("Duplicate characters in 'google' are: " + duplicates);
+
+Console.WriteLine(Environment.NewLine);
+Console.WriteLine("String Operations get unique characters");
+
+StringDataStructure_GetUniqueCharacters uniqueCharacters = new StringDataStructure_GetUniqueCharacters();
+// Find the duplicate characters in the string
+var uniqueCh = uniqueCharacters.GetUniqueCharacters("google");
+Console.WriteLine("Unique characters in 'google' are: " + uniqueCh);
