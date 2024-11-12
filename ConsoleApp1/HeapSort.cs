@@ -20,17 +20,19 @@ class HeapSort
         // If largest is not root, swap with root and continue heapifying
         if (largest != i)
         {
-            Swap(ref arr[i], ref arr[largest]);
-            Heapify(arr, n, largest);
+            if (largest != i)
+            {
+                int temp = arr[i]; // Swap
+                arr[i] = arr[largest];
+                arr[largest] = temp;
+
+                // Recursively heapify the affected sub-tree
+                Heapify(arr, n, largest);
+            }
         }
     }
 
-    public void Swap(ref int x, ref int y)
-    {
-        int temp = x;
-        x = y;
-        y = temp;
-    }
+
 
     public void HeapSortMethod(int[] arr)
     {
@@ -43,7 +45,11 @@ class HeapSort
         // One by one extract elements from heap
         for (int i = n - 1; i > 0; i--)
         {
-            Swap(ref arr[0], ref arr[i]);
+            // Move current root to end
+            int temp = arr[0];
+            arr[0] = arr[i];
+            arr[i] = temp;
+
             Heapify(arr, i, 0);
         }
     }
