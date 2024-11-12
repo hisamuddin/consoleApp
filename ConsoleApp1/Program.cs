@@ -134,3 +134,4 @@ Console.WriteLine("String Operations get CheckMaxOccurrenceOfCharacter");
 CheckMaxOccurrenceOfChar checkMaxOccurrenceOf = new CheckMaxOccurrenceOfChar();
 var maxOcuurence = checkMaxOccurrenceOf.CheckMaxOccurrenceOfCharacter("Malayalam");
 Console.WriteLine($"The maximum occurence of string  is {maxOcuurence}");
+
