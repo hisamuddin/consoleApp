@@ -127,4 +127,10 @@ Console.WriteLine("String Operations get palindrome");
 
 Palindrome palindrome = new Palindrome();
 var isPalindrome = palindrome.CheckPalindrome("malayalam");
-Console.WriteLine($"The provided string is {palindrome}");
+Console.WriteLine($"The provided string is {isPalindrome}");
+
+Console.WriteLine(Environment.NewLine);
+Console.WriteLine("String Operations get CheckMaxOccurrenceOfCharacter");
+CheckMaxOccurrenceOfChar checkMaxOccurrenceOf = new CheckMaxOccurrenceOfChar();
+var maxOcuurence = checkMaxOccurrenceOf.CheckMaxOccurrenceOfCharacter("Malayalam");
+Console.WriteLine($"The maximum occurence of string  is {maxOcuurence}");
