@@ -121,3 +121,10 @@ StringDataStructure_GetUniqueCharacters uniqueCharacters = new StringDataStructu
 // Find the duplicate characters in the string
 var uniqueCh = uniqueCharacters.GetUniqueCharacters("google");
 Console.WriteLine("Unique characters in 'google' are: " + uniqueCh);
+
+Console.WriteLine(Environment.NewLine);
+Console.WriteLine("String Operations get palindrome");
+
+Palindrome palindrome = new Palindrome();
+var isPalindrome = palindrome.CheckPalindrome("malayalam");
+Console.WriteLine($"The provided string is {palindrome}");
