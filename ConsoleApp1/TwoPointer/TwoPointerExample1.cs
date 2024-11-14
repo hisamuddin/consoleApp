@@ -27,11 +27,4 @@ class TwoPointerExample1
         Console.WriteLine("No pair found with the given sum.");
         return false;
     }
-
-    static void Main()
-    {
-        int[] arr = { 1, 2, 3, 5, 7, 8, 11 };
-        int targetSum = 10;
-        FindPairWithSum(arr, targetSum);
-    }
 }
