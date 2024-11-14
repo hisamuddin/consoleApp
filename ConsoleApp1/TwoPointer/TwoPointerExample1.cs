@@ -1,6 +1,6 @@
-class TwoPointerExample
+class TwoPointerExample1
 {
-    public static bool FindPairWithSum(int[] arr, int targetSum)
+    public bool FindPairWithSum(int[] arr, int targetSum)
     {
         int left = 0;
         int right = arr.Length - 1;

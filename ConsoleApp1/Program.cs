@@ -135,3 +135,19 @@ CheckMaxOccurrenceOfChar checkMaxOccurrenceOf = new CheckMaxOccurrenceOfChar();
 var maxOcuurence = checkMaxOccurrenceOf.CheckMaxOccurrenceOfCharacter("Malayalam");
 Console.WriteLine($"The maximum occurence of string  is {maxOcuurence}");
 
+Console.WriteLine(Environment.NewLine);
+Console.WriteLine("Two Pointer Operations");
+int[] arr7 = { 170, 45, 75, 90, 802, 24, 2, 66 };
+
+TwoPointerExample1 twoPointer = new TwoPointerExample1();
+var twopointer = twoPointer.FindPairWithSum(arr7, 120);
+Console.WriteLine($"Result for two pointer {twopointer}");
+
+Console.WriteLine(Environment.NewLine);
+Console.WriteLine("Two Pointer Operations -- 2");
+TwoPointerExample2 twoPointer2 = new TwoPointerExample2();
+int[] arr8 = { 170, 45, 75, 75, 90, 802, 24, 2, 66 };
+var twopointer2 = twoPointer2.RemoveDuplicates(arr7);
+Console.WriteLine($"Result for two pointer 2removeduplicate is -{twopointer2}");
+
+
