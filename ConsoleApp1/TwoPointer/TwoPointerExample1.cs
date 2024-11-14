@@ -23,7 +23,6 @@ class TwoPointerExample1
                 right--; // Decrease the sum by moving the right pointer to the left
             }
         }
-
         Console.WriteLine("No pair found with the given sum.");
         return false;
     }
