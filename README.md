@@ -438,6 +438,26 @@ For a software engineer with around 5 years of experience, a data analytics syll
    - **Books**: "Practical Statistics for Data Scientists," "Python for Data Analysis" by Wes McKinney, "Storytelling with Data" by Cole Nussbaumer Knaflic
 
 
+
+   DSA Interview Questions on Array
+Check if pair with the given Sum exists in Array
+Best Time to Buy and Sell Stock
+Find duplicates
+Product of Array Except Self
+Maximum Subarray
+Maximum Product Subarray
+Find Minimum in Rotated Sorted Array
+Search in Rotated Sorted Array
+3 Sum
+Container With Most Water
+Find the Factorial of a large number
+Trapping Rain Water
+Chocolate Distribution Problem
+Insert Interval
+Merge Intervals
+Non-overlapping Intervals
+
+
 ```
 
 </details>
