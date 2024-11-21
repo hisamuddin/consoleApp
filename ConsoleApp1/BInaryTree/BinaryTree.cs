@@ -1,5 +1,6 @@
-class tree
+class Tree
 {
+    //Find Leaves of Binary Tree
     public class Solution
     {
         public IList<IList<int>> FindLeaves(TreeNode root)
@@ -26,4 +27,18 @@ class tree
         }
     }
 
+}
+public class TreeNode
+{
+    public int val; // The value of the node
+    public TreeNode left; // Reference to the left child
+    public TreeNode right; // Reference to the right child
+
+    // Constructor to initialize the node
+    public TreeNode(int value = 0, TreeNode leftChild = null, TreeNode rightChild = null)
+    {
+        val = value;
+        left = leftChild;
+        right = rightChild;
+    }
 }
