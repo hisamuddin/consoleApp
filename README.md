@@ -460,6 +460,43 @@ Non-overlapping Intervals
 
 
 
+As of November 2024, .NET 9 has been released, introducing several new features and enhancements across various components of the framework. Here's an overview of the latest updates:
+
+.NET 9 Enhancements:
+
+TitleBar Control for Windows: A new TitleBar control is available for Windows desktop applications, allowing developers to customize the title bar area more easily. 
+Microsoft Learn
+
+HybridWebView Control: The HybridWebView control enables the integration of JavaScript-enabled content from frameworks like ReactJS, Vue.js, and Angular into .NET applications, facilitating the development of hybrid applications. 
+Microsoft Learn
+
+Entry Control Enhancements: The Entry control now supports additional keyboard modes, improving user input handling across different platforms. 
+Microsoft Learn
+
+Automatic Handler Disconnection: Control handlers now automatically disconnect from their controls when possible, enhancing resource management and application performance. 
+Microsoft Learn
+
+MainPage Deprecation: The MainPage property is deprecated in favor of overriding the Application.CreateWindow(IActivationState) method to set the primary page of the application, providing a more flexible approach to window management. 
+Microsoft Learn
+
+.NET 8 Recap:
+
+Prior to .NET 9, .NET 8 introduced significant improvements:
+
+Performance and Runtime Enhancements: .NET 8 included advancements in performance, garbage collection, and core libraries, along with a new globalization mode for mobile apps and source generators for COM interop and configuration binding. 
+Microsoft Learn
+
+C# 12 Integration: C# 12 was released with .NET 8, bringing features like primary constructors, default values for lambda expressions, and type aliasing, enhancing code expressiveness and reducing boilerplate. 
+Techcronus
+
+ASP.NET Core Updates: Improvements in Blazor, SignalR, minimal APIs, Native AOT, and server enhancements were part of ASP.NET Core in .NET 8, aiming to streamline web application development. 
+Microsoft Learn
+
+Entity Framework Core 8: EF Core 8 introduced support for complex types, collections of primitive types, JSON column mapping, and other features to enhance data access and manipulation. 
+Microsoft Learn
+
+Windows Forms and WPF Enhancements: Updates included data binding improvements, DPI support, and new controls like OpenFolderDialog in WPF, enhancing desktop application development. 
+Microsoft Learn
 
 
 ```
