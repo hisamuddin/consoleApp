@@ -498,7 +498,55 @@ Microsoft Learn
 Windows Forms and WPF Enhancements: Updates included data binding improvements, DPI support, and new controls like OpenFolderDialog in WPF, enhancing desktop application development. 
 Microsoft Learn
 
+Dynamic Programming (DP): Overview
+Dynamic Programming (DP) is an optimization technique used to solve problems by breaking them down into overlapping subproblems. Unlike divide-and-conquer, DP stores the results of subproblems to avoid redundant computations, making it ideal for problems with overlapping substructure and optimal substructure properties.
 
+Key Characteristics of DP Problems
+----------------------------------
+Overlapping Subproblems:
+
+    The problem can be broken into smaller subproblems that are solved multiple times.
+    DP avoids recalculating these subproblems by storing results in a table (memoization or tabulation).
+Optimal Substructure:
+
+    The solution to a problem can be constructed from the solutions of its subproblems.
+
+Dynamic Programming Approaches
+-------------------------------
+Memoization (Top-Down):
+
+    Solve the problem recursively.
+    Store the results of solved subproblems in a table (cache).
+    If the result is already calculated, return it instead of recomputing.
+Tabulation (Bottom-Up):
+
+    Solve the problem iteratively.
+    Build a table (array or matrix) from smaller subproblems to the final solution.
+
+Steps to Solve a DP Problem
+---------------------------
+Define the Problem:
+
+    Clearly state the problem and identify the input, output, and constraints.
+
+Identify the Subproblems:
+
+    Break the problem into smaller overlapping problems.
+Define the State:
+
+    Determine the variables that uniquely define a subproblem (e.g., dp[i] might represent the solution for the first i elements).
+Establish the Recurrence Relation:
+
+    Derive a formula that expresses the solution to a subproblem in terms of smaller subproblems.
+Base Cases:
+
+    Define the values for the smallest subproblems (usually trivial cases).
+Iterative or Recursive Implementation:
+
+    Choose either a top-down (memoization) or bottom-up (tabulation) approach.
+Optimize Space (Optional):
+
+    If the problem allows, reduce the storage by keeping only relevant previous states.
 ```
 
 </details>
