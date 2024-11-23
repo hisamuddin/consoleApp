@@ -1,7 +1,7 @@
 public class TwoPointerExample2
 {
 
-    public static int RemoveDuplicates(int[] arr)
+    public int RemoveDuplicates(int[] arr)
     {
         if (arr.Length == 0) return 0;
 

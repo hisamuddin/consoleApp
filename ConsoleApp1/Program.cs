@@ -151,3 +151,7 @@ var twopointer2 = twoPointer2.RemoveDuplicates(arr7);
 Console.WriteLine($"Result for two pointer 2removeduplicate is -{twopointer2}");
 
 
+Console.WriteLine("Reverse string Operations");
+ReverseString.ReverseStringFucntion("Google");
+Console.WriteLine($"Result for Reverse string Operations -{ReverseString.ReverseStringFucntion("Google")}");
+
