@@ -550,7 +550,8 @@ Optimize Space (Optional):
 
     No study - 26 Nov 2024
     Created Project for testing azure and integration of other parts 
-    No Study - 28 Nov 2024 
+    No Study - 28 Nov 2024
+    No Study - 30 Nov 2024
 ```
 
 </details>
